@@ -20,7 +20,6 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: black;
 }
 
 ul {
@@ -58,6 +57,64 @@ ul {
 
 
 /* end global rules */
+/* start componants */
+.main-heading {
+    text-align: center;
+}
+
+.main-heading h2 {
+    font-size: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.main-heading h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    background-color: black;
+    width: 120px;
+    height: 2px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -38px;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 14px;
+    height: 14px;
+    border: 2px solid black;
+    border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.main-heading p {
+    width: 550px;
+    margin: 0 auto 100px;
+    line-height: 2;
+    max-width: 100%;
+    color: #777;
+}
+
+/* end componants */
 /* start header */
 header {
     position: absolute;
@@ -123,7 +180,7 @@ header .container nav ul {
         top: 100%;
         left: 0;
         width: 100%;
-        color: rgb(0, 0, 0 / 50%);
+        background-color: rgba(0, 0, 0, 0.5);
         text-align: center;
     }
 
@@ -176,7 +233,6 @@ header .container nav .form i {
 
 header .container nav .form:hover i {
     color: var(--main-color);
-
 }
 
 /* end header */
@@ -218,6 +274,16 @@ header .container nav .form:hover i {
     max-width: 500px;
 }
 
+@media (max-width: 767px) {
+    .landing .text {
+        width: 100%;
+    }
+
+    .landing .text .content {
+        max-width: 100%;
+    }
+}
+
 .landing .text .content h2 {
     font-size: 32px;
     font-weight: normal;
@@ -229,6 +295,64 @@ header .container nav .form:hover i {
     font-size: 14px;
     line-height: 2;
 
+}
+
+.landing .left,
+.landing .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    color: #ddd;
+}
+
+.left {
+    left: 30px;
+}
+
+.right {
+    right: 30px;
+}
+
+@media (max-width: 767px) {
+
+    .landing .left,
+    .landing .right {
+        display: none;
+    }
+}
+
+.landing .bullets {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -ms-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+    display: flex;
+}
+
+.landing .bullets li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.landing .bullets .active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
 }
 
 /* end landing */
