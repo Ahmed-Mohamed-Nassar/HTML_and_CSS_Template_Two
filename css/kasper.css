@@ -1168,3 +1168,146 @@ header .container nav .form:hover i {
 }
 
 /* end subscribe */
+/* start contact */
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.contact .container .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:767px) {
+    .contact .container .content {
+        flex-direction: column;
+    }
+}
+
+.contact .container .content form {
+    flex-basis: 70%;
+}
+
+.contact .container .content form .main-input {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #CCC;
+    padding: 20px;
+}
+
+.contact .container .content form textarea.main-input {
+    height: 200px;
+}
+
+.contact .container .content form textarea.main-input:focus {
+    outline: none;
+}
+
+.contact .container .content form input[type="submit"] {
+    display: flex;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+}
+
+.contact .container .content .info {
+    flex-basis: 25%;
+}
+
+@media (max-width:767px) {
+    .contact .container .content .info {
+        order: -1;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: -50px;
+    }
+}
+
+.contact .container .content .info h4 {
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.contact .container .content .info .phone {
+    line-height: 2;
+    color: #777;
+}
+
+.contact .container .content .info h4:last-of-type {
+    margin-top: 70px;
+}
+
+@media (max-width:767px) {
+    .contact .container .content .info h4:last-of-type {
+        margin-top: 30px;
+    }
+}
+
+.contact .container .content .info .address {
+    color: #777;
+    line-height: 2;
+}
+
+/* end contact */
+/* start footer */
+.footer {
+    padding-top: calc(var(--section-padding) / 2);
+    padding-bottom: calc(var(--section-padding) / 2);
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+}
+
+.footer .container {
+    position: relative;
+}
+
+.footer .container img {
+    margin-bottom: 30px;
+}
+
+.footer .container p:not(.copyright) {
+    text-transform: uppercase;
+    padding: 0 25px 20px 25px;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    font-size: 22px;
+    margin: 0 auto;
+}
+
+.footer .container .i-social {
+    margin: 20px auto 20px auto;
+}
+
+.footer .container i:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+.footer .container .copyright {
+    margin-top: 60px;
+}
+
+.footer .container .copyright span {
+    color: var(--main-color);
+}
+
+/* end footer */
